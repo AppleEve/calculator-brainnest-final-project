@@ -14,14 +14,22 @@ body{
 }
 
 .display{
-    display: flex; 
-    justify-content: end;
     padding: 10px 5px;
     background-color: rgb(245,221,221);
     border-radius: 20px;
     height: 70px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 15px;
+    text-align: right;
+    pointer-events: none;
+    width: 90%; 
+    font-size: 25px;
+    
+}
+
+.previousCalculation, .currentCalculation{
+    display: flex;
+    justify-content: end;
 }
 
 .row{
@@ -31,19 +39,27 @@ body{
 
 button{
     display: flex;
+    justify-content: center; 
     border-radius: 50%;
     height: 40px;
     width: 40px;
     margin: 5px;
     text-align: center;
-    padding: 8px 0px 10px 12px;
+    padding: 8px;
     font-size: 20px;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.53) 1px 6px 6px;
 }
 
 .equalsButton {
     width: 85px;
     border-radius: 30%;
+    justify-content: center;
 }
 
 .number{
@@ -51,7 +67,7 @@ button{
     
 }
 
-.calculation{
+.operation{
     background-color: rgb(107,78,113);
 }
 
