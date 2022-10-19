@@ -1,0 +1,60 @@
+
+body{
+    background-color: antiquewhite;
+}
+.container{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    max-width: 200px;
+    padding: 30px;
+    background-color: rgb(194,178,180);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.display{
+    display: flex; 
+    justify-content: end;
+    padding: 10px 5px;
+    background-color: rgb(245,221,221);
+    border-radius: 20px;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 15px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    display: flex;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    text-align: center;
+    padding: 8px 0px 10px 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.equalsButton {
+    width: 85px;
+    border-radius: 30%;
+}
+
+.number{
+    background-color: rgb(83,104,126);
+    
+}
+
+.calculation{
+    background-color: rgb(107,78,113);
+}
+
+.main{
+    background-color: rgb(58,68,84); 
+}
