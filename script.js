@@ -1,28 +1,43 @@
 function operate() {
 
-    let buttons = document.querySelectorAll('.button');
-    let screen = document.querySelector('.display');
-    let equalsButton = document.querySelector('.equalsButton');
-    let allClearButton = document.querySelector('.clearAll');
-    let deleteButton = document.querySelector('.delete');
-    let previousCalculation = document.querySelector('.previousCalculation');
-    let currentCalculation = document.querySelector('.currentCalculation');
+    const calculator = document.querySelector('.calculator');
+    const calculatorButtons = calculator.querySelector('.calculator-buttons');
+    
 
-    buttons.forEach(function(button){
-        button.addEventListener('click', function(e){
-            let value = e.target.dataset.value;
-            screen.value += value;
-            
-         })
-    });
+    calculatorButtons.addEventListener('click' , function(e){
+        if (e.target.matches('button')){
+            const calculatorButton = e.target;
+            const action = calculatorButton.dataset.action;
 
-    equalsButton.addEventListener('click', function(e){
-            let result = eval(screen.value);
-            screen.value = result;
+            if (!action) {
+            console.log('number key!')
+            }
+
+            if (
+            action === 'add' ||
+            action === 'subtract' ||
+            action === 'multiply' ||
+            action === 'divide' ||
+            action === 'percent'
+            ) {
+            console.log('operator key!')
+            }
+
+            if (action === 'decimal') {
+            console.log('decimal key!')
+            }
+
+            if (action === 'clear') {
+            console.log('clear key!')
+            }
+
+            if (action === 'equal') {
+            console.log('equal key!')
+            }
+        }
     })
+    
+    
 
-    allClearButton.addEventListener('click', function(e){
-        screen.value = " ";
-    })
 }
 operate();
