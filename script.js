@@ -36,11 +36,8 @@ function handleOperator(nextOperator) {
     calculatorData.displayValue = String(result);
     calculatorData.nbr1 = result;
   }
-
   calculatorData.calculatorInput = true;
   calculatorData.operator = nextOperator;
-
-  console.log(calculatorData)
 }
 
 function operate (nbr1, nbr2, operator){
@@ -52,6 +49,8 @@ function operate (nbr1, nbr2, operator){
     return nbr1 * nbr2;
   } else if (operator === '/') {
     return nbr1 / nbr2;
+  } else if (operator === '%') {
+    return nbr1 % nbr2;
   }
 }
 
@@ -68,9 +67,8 @@ function deleteOne() {
 
 const display = document.querySelector('.screen')
 const buttons = document.querySelector('.calculator-buttons')
-const equalsButton = document.querySelector('[data-equals]')
 const deleteButton = document.querySelector('[data-delete]')
-const clearButton = document.querySelector('[data-clear]')
+
 
 buttons.addEventListener('click', (event) => {
     const {target} = event;

@@ -2,10 +2,12 @@
 * {
     font-family: 'Play', sans-serif;
 }
+
 body{
     
     background-color: rgb(0,141,169)
 }
+
 .calculator{
     text-align: center;
     display: block;
@@ -72,7 +74,6 @@ button:hover{
 
 .number{
     background-color: rgb(83,104,126);
-    
 }
 
 .operator{
@@ -81,8 +82,4 @@ button:hover{
 
 .main{
     background-color: rgb(58,68,84); 
-}
-
-.active-button {
-    background-color: rgb(196, 172, 201);
 }
