@@ -17,7 +17,6 @@ function amendDigit(digit){
     } else {
         calculatorData.displayValue = displayValue === '0' ? digit : displayValue + digit;
     }
-    console.log(calculatorData);
 }
 
 function addDecimal(dot) {
@@ -68,7 +67,6 @@ function deleteOne() {
 const display = document.querySelector('.screen')
 const buttons = document.querySelector('.calculator-buttons')
 const deleteButton = document.querySelector('[data-delete]')
-
 
 buttons.addEventListener('click', (event) => {
     const {target} = event;
