@@ -31,20 +31,13 @@ body{
     color: gray;
 }
 
-
-.previous-operand, .current-operand{
-    display: flex;
-    justify-content: end;
-}
-
-.previous-operand {
-    font-size: 25px;
-    color: gray;
-}
-
-.current-operand {
+.display input {
+    background-color: rgb(58, 68, 84, 0.9);
+    border: none;
     font-size: 30px;
-    color: rgb(211, 211, 211);
+    color: gray;
+    width: 100%;
+    text-align: right;
 }
 
 .row{
@@ -71,7 +64,7 @@ button:hover{
     box-shadow: none;
 }
 
-.equalsButton {
+.equals {
     width: 85px;
     border-radius: 20%;
     justify-content: center;
@@ -82,7 +75,7 @@ button:hover{
     
 }
 
-.operation{
+.operator{
     background-color: rgb(107,78,113);
 }
 

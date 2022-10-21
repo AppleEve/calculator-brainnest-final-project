@@ -11,39 +11,38 @@
 </head>
 <body>
     <div class="calculator">
-        <div class="display">
-            <div class = "previous-operand" data-previous-operand></div>
-            <div class = "current-operand" data-current-operand></div>
-        </div>
+        <form class="display">
+           <input type="text" class="screen" value="" disabled />
+        </form>
         <div class="calculator-buttons">
         <div class="row">
-            <button class="main clearAll" data-clear>C</button>
-            <button class="main delete" data-delete>&#129044;</button>
-            <button class=" equalsButton main" data-equals>=</button>
+            <button class="button main clear-all" data-clear>C</button>
+            <button class="button main delete" data-delete>&#129044;</button>
+            <button class="button main operator equals" data-equals>=</button>
         </div>
     <div class="row">
-        <button class="button number" data-number>1</button>
-        <button class="button number" data-number>2</button>
-        <button class="button number" data-number>3</button>
-        <button class="button operation" data-operation="add">+</button>
+        <button class="button number" value="1">1</button>
+        <button class="button number" value="2">2</button>
+        <button class="button number" value="3">3</button>
+        <button class="button operator" value="+">+</button>
     </div>
     <div class="row">
-        <button class="button number" data-number>4</button>
-        <button class="button number" data-number>5</button>
-        <button class="button number" data-number>6</button>
-        <button class="button operation" data-operation="subtract">-</button>
+        <button class="button number" value="4">4</button>
+        <button class="button number" value="5">5</button>
+        <button class="button number" value="6">6</button>
+        <button class="button operator" value="-">-</button>
     </div>
     <div class="row">
-        <button class="button number" data-number>7</button>
-        <button class="button number" data-number>8</button>
-        <button class="button number" data-number>9</button>
-        <button class="button operation" data-operation="multiply">*</button>
+        <button class="button number" value="7">7</button>
+        <button class="button number" value="8">8</button>
+        <button class="button number" value="9">9</button>
+        <button class="button operator" value="*">*</button>
     </div>
     <div class="row">
-        <button class="button number" data-number>.</button>
-        <button class="button number" data-number>0</button>
-        <button class="button operation" data-operation="percent">%</button>
-        <button class="button operation" data-action="divide">÷</button>
+        <button class="button number decimal" value=".">.</button>
+        <button class="button number" value="0">0</button>
+        <button class="button operator" value="%">%</button>
+        <button class="button operator" value="/">÷</button>
     </div>
 </div>
 </div>
