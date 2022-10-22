@@ -66,7 +66,7 @@ function handleOperator(clickedOperator) {
     if (result == 'Infinity'){
         calculatorData.displayValue = "ERROR"
     } else {
-        calculatorData.displayValue = String(result.toFixed(9));
+        calculatorData.displayValue = String(result);
     }
     calculatorData.nbr1 = result;
   }
