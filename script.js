@@ -10,7 +10,7 @@ function updateDisplay(){
 }
 
 function amendDigit(digit){
-    const {displayValue} = calculatorData;
+    const displayValue = calculatorData.displayValue;
     if (calculatorData.calculatorInput === true){
         calculatorData.displayValue = digit;
         calculatorData.calculatorInput = false;
@@ -25,18 +25,23 @@ function addDecimal(dot) {
   }
 }
 
-function handleOperator(nextOperator) {
+function handleOperator(clickedOperator) {
   const { nbr1, displayValue, operator } = calculatorData
   const inputValue = parseFloat(displayValue);
   if (nbr1 === null && !isNaN(inputValue)) {
     calculatorData.nbr1 = inputValue;
   } else if (operator) {
     const result = operate(nbr1, inputValue, operator);
-    calculatorData.displayValue = String(result);
+    console.log(result);
+    if (result == 'Infinity'){
+        calculatorData.displayValue = "ERROR"
+    } else {
+        calculatorData.displayValue = String(result.toFixed(9));
+    }
     calculatorData.nbr1 = result;
   }
   calculatorData.calculatorInput = true;
-  calculatorData.operator = nextOperator;
+  calculatorData.operator = clickedOperator;
 }
 
 function operate (nbr1, nbr2, operator){
@@ -44,7 +49,7 @@ function operate (nbr1, nbr2, operator){
     return nbr1 + nbr2;
   } else if (operator === '-') {
     return nbr1 - nbr2;
-  } else if (operator === '*') {
+  } else if (operator === '*' && nbr2 !== '0') {
     return nbr1 * nbr2;
   } else if (operator === '/') {
     return nbr1 / nbr2;
@@ -66,10 +71,10 @@ function deleteOne() {
 
 const display = document.querySelector('.screen')
 const buttons = document.querySelector('.calculator-buttons')
-const deleteButton = document.querySelector('[data-delete]')
+const deleteButton = document.querySelector('.delete')
 
 buttons.addEventListener('click', (event) => {
-    const {target} = event;
+    const target = event.target;
     if (!target.matches('button')) {
     return;
     }
@@ -87,6 +92,7 @@ buttons.addEventListener('click', (event) => {
         clear();
     return;
     }
+    
     amendDigit(target.value);
     updateDisplay();
 });
