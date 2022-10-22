@@ -4,7 +4,37 @@ const calculatorData = {
     operator: null,
     calculatorInput: false,
 };
+const display = document.querySelector('.screen')
+const buttons = document.querySelector('.calculator-buttons')
+const deleteButton = document.querySelector('.delete')
 
+buttons.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.matches('button')) {
+    return;
+    }
+    if (target.classList.contains('operator')) {
+        handleOperator(target.value);
+        updateDisplay();
+        return;
+    }
+    if (target.classList.contains('decimal')) {
+        addDecimal(target.value);
+        updateDisplay();
+    return;
+    }
+    if (target.classList.contains('clear-all')) {
+        clear();
+    return;
+    }
+    
+    amendDigit(target.value);
+    updateDisplay();
+});
+
+deleteButton.addEventListener('click', function(e) {
+    deleteOne();
+})
 function updateDisplay(){
     display.value = calculatorData.displayValue;
 }
@@ -68,37 +98,4 @@ function clear() {
 function deleteOne() {
     calculatorData.displayValue = calculatorData.displayValue.slice(0, -1)
 }
-
-const display = document.querySelector('.screen')
-const buttons = document.querySelector('.calculator-buttons')
-const deleteButton = document.querySelector('.delete')
-
-buttons.addEventListener('click', (event) => {
-    const target = event.target;
-    if (!target.matches('button')) {
-    return;
-    }
-    if (target.classList.contains('operator')) {
-        handleOperator(target.value);
-        updateDisplay();
-        return;
-    }
-    if (target.classList.contains('decimal')) {
-        addDecimal(target.value);
-        updateDisplay();
-    return;
-    }
-    if (target.classList.contains('clear-all')) {
-        clear();
-    return;
-    }
-    
-    amendDigit(target.value);
-    updateDisplay();
-});
-
-deleteButton.addEventListener('click', function(e) {
-    deleteOne();
-})
-
 updateDisplay();
