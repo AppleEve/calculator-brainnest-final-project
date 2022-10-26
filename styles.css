@@ -4,7 +4,6 @@
 }
 
 body{
-    
     background-color: rgb(0,141,169)
 }
 
@@ -20,7 +19,7 @@ body{
 }
 
 .display{
-    padding: 10px 5px;
+    padding: 10px 10px;
     background-color: rgb(58, 68, 84, 0.9);
     border-radius: 20px;
     height: 70px;
@@ -52,7 +51,7 @@ button{
     justify-content: center; 
     border-radius: 20%;
     height: 40px;
-    width: 40px;
+    width: 45px;
     margin: 5px;
     text-align: center;
     padding: 8px;
@@ -67,7 +66,7 @@ button:hover{
 }
 
 .equals {
-    width: 85px;
+    width: 95px;
     border-radius: 20%;
     justify-content: center;
 }

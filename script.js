@@ -4,6 +4,7 @@ const calculatorData = {
     operator: null,
     calculatorInput: false,
 };
+
 const display = document.querySelector('.screen')
 const buttons = document.querySelector('.calculator-buttons')
 const deleteButton = document.querySelector('.delete')
@@ -98,4 +99,5 @@ function clear() {
 function deleteOne() {
     calculatorData.displayValue = calculatorData.displayValue.slice(0, -1)
 }
+
 updateDisplay();
