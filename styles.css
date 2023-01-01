@@ -89,7 +89,11 @@ button:hover {
 
 .main {
   background-color: rgb(58, 68, 84);
-  font-size: 17px;
+}
+
+.delete {
+  font-size: 15px;
+  padding-top: 12px;
 }
 .active-operator {
   background-color: rgb(163, 140, 167);
