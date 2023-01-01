@@ -3,6 +3,7 @@ let screen1 = document.querySelector(".screen1");
 let screen2 = document.querySelector(".screen2");
 let calculation = "";
 let usedOperator = "";
+let result = false;
 screen2.value = "0";
 buttons.forEach(getButtonValue);
 
@@ -28,30 +29,37 @@ function updateScreen1(target) {
 }
 
 function updateScreen2(target) {
-  buttons.forEach(removeActiveClass);
-  if (target.classList.contains("number")) {
-    screen2.value =
-      screen2.value === "0" ? target.value : screen2.value + target.value;
-  } else if (target.classList.contains("operator")) {
-    target.classList.add("active-operator");
-    updateScreen1(target);
-    screen2.value = "0";
-  } else if (target.classList.contains("equals")) {
-    updateScreen1(target);
-    screen2.value = eval(calculation);
-  } else if (target.classList.contains("decimal")) {
-    if (!screen2.value.includes(".")) {
-      screen2.value = screen2.value + target.value;
-    }
-  } else if (target.classList.contains("clear-all")) {
-    screen1.value = "";
-    screen2.value = "0";
-  } else if (target.classList.contains("delete")) {
-    if (screen2.value.length > 1) {
-      screen2.value = screen2.value.slice(0, -1);
-    } else {
+  if (result == false) {
+    buttons.forEach(removeActiveClass);
+    if (target.classList.contains("number")) {
+      screen2.value =
+        screen2.value === "0" ? target.value : screen2.value + target.value;
+    } else if (target.classList.contains("operator")) {
+      target.classList.add("active-operator");
+      updateScreen1(target);
       screen2.value = "0";
+    } else if (target.classList.contains("equals")) {
+      updateScreen1(target);
+      screen2.value = eval(calculation);
+      result = true;
+    } else if (target.classList.contains("decimal")) {
+      if (!screen2.value.includes(".")) {
+        screen2.value = screen2.value + target.value;
+      }
+    } else if (target.classList.contains("clear-all")) {
+      screen1.value = "";
+      screen2.value = "0";
+    } else if (target.classList.contains("delete")) {
+      if (screen2.value.length > 1) {
+        screen2.value = screen2.value.slice(0, -1);
+      } else {
+        screen2.value = "0";
+      }
     }
+  } else {
+    screen1.value = "";
+    screen2.value = target.value;
+    result = false;
   }
 }
 
