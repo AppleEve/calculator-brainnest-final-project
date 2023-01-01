@@ -1,84 +1,94 @@
-
 * {
-    font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
 }
 
-body{
-    background-color: rgb(0,141,169)
+body {
+  background-color: rgb(0, 141, 169);
 }
 
-.calculator{
-    text-align: center;
-    display: block;
-    margin: 50px auto;
-    border-radius: 20px;
-    max-width: 200px;
-    padding: 30px;
-    background-color: #32323A;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.calculator {
+  text-align: center;
+  display: block;
+  margin: 50px auto;
+  border-radius: 20px;
+  max-width: 200px;
+  padding: 30px;
+  background-color: #32323a;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.display{
-    padding: 10px 10px;
-    background-color: rgb(58, 68, 84, 0.9);
-    border-radius: 20px;
-    height: 70px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-bottom: 15px;
-    text-align: right;
-    pointer-events: none;
-    width: 90%; 
-    font-size: 25px;
-    color: gray;
+.display {
+  padding: 10px 10px;
+  background-color: rgb(58, 68, 84, 0.9);
+  border-radius: 20px;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 15px;
+  text-align: right;
+  pointer-events: none;
+  width: 90%;
+  font-size: 25px;
+  color: gray;
 }
 
 .display input {
-    background-color: rgb(58, 68, 84, 0.9);
-    border: none;
-    font-size: 30px;
-    color: gray;
-    width: 100%;
-    text-align: right;
+  background-color: rgb(58, 68, 84, 0.9);
+  border: none;
+  color: gray;
+  width: 100%;
+  text-align: right;
 }
 
-.row{
-    display: flex;
-    justify-content: center;
+.screen1 {
+  font-size: 18px;
 }
 
-button{
-    display: flex;
-    justify-content: center; 
-    border-radius: 20%;
-    height: 40px;
-    width: 45px;
-    margin: 5px;
-    text-align: center;
-    padding: 8px;
-    font-size: 20px;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
-    cursor: pointer;
+.screen2 {
+  font-size: 30px;
 }
 
-button:hover{
-    box-shadow: none;
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  height: 40px;
+  width: 45px;
+  margin: 5px;
+  text-align: center;
+  padding: 8px;
+  font-size: 20px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: none;
 }
 
 .equals {
-    width: 95px;
-    border-radius: 20%;
-    justify-content: center;
+  width: 95px;
+  border-radius: 20%;
+  justify-content: center;
 }
 
-.number{
-    background-color: rgb(83,104,126);
+.number {
+  background-color: rgb(83, 104, 126);
 }
 
-.operator{
-    background-color: rgb(107,78,113);
+.operator {
+  background-color: rgb(107, 78, 113);
 }
 
-.main{
-    background-color: rgb(58,68,84); 
+.main {
+  background-color: rgb(58, 68, 84);
+}
+.active-operator {
+  background-color: rgb(163, 140, 167);
 }

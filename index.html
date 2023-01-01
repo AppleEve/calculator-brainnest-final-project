@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator App 📱</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="calculator">
-        <form class="display">
-           <input type="text" class="screen" value="" disabled />
-        </form>
-        <div class="calculator-buttons">
-            <div class="row">
-                <button class="button main clear-all" data-clear>C</button>
-                <button class="button main delete" data-delete>&#129044;</button>
-                <button class="button main operator equals" data-equals>=</button>
-            </div>
-            <div class="row">
-                <button class="button number" value="1">1</button>
-                <button class="button number" value="2">2</button>
-                <button class="button number" value="3">3</button>
-                <button class="button operator" value="+">+</button>
-            </div>
-            <div class="row">
-                <button class="button number" value="4">4</button>
-                <button class="button number" value="5">5</button>
-                <button class="button number" value="6">6</button>
-                <button class="button operator" value="-">-</button>
-            </div>
-            <div class="row">
-                <button class="button number" value="7">7</button>
-                <button class="button number" value="8">8</button>
-                <button class="button number" value="9">9</button>
-                <button class="button operator" value="*">*</button>
-            </div>
-            <div class="row">
-                <button class="button number decimal" value=".">.</button>
-                <button class="button number" value="0">0</button>
-                <button class="button operator" value="%">%</button>
-                <button class="button operator" value="/">÷</button>
-            </div>
+      <form class="display">
+        <input type="text" class="screen1" value="" disabled />
+        <input type="text" class="screen2" value="" disabled />
+      </form>
+      <div class="calculator-buttons">
+        <div class="row">
+          <button class="button main clear-all" data-clear>C</button>
+          <button class="button main delete" data-delete>&#129044;</button>
+          <button class="button main equals" data-equals>=</button>
         </div>
+        <div class="row">
+          <button class="button number" value="1">1</button>
+          <button class="button number" value="2">2</button>
+          <button class="button number" value="3">3</button>
+          <button class="button operator" value="+">+</button>
+        </div>
+        <div class="row">
+          <button class="button number" value="4">4</button>
+          <button class="button number" value="5">5</button>
+          <button class="button number" value="6">6</button>
+          <button class="button operator" value="-">-</button>
+        </div>
+        <div class="row">
+          <button class="button number" value="7">7</button>
+          <button class="button number" value="8">8</button>
+          <button class="button number" value="9">9</button>
+          <button class="button operator" value="*">*</button>
+        </div>
+        <div class="row">
+          <button class="button number decimal" value=".">.</button>
+          <button class="button number" value="0">0</button>
+          <button class="button operator" value="%">%</button>
+          <button class="button operator" value="/">÷</button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
