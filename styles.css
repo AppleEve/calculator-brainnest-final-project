@@ -72,13 +72,15 @@ button:hover {
   box-shadow: none;
 }
 
-.equals {
-  width: 95px;
+.equals,
+.zero {
+  width: 120px;
   border-radius: 20%;
   justify-content: center;
 }
 
-.number {
+.number,
+.decimal {
   background-color: rgb(83, 104, 126);
 }
 
