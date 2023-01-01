@@ -10,22 +10,13 @@ buttons.forEach(getButtonValue);
 function getButtonValue(button) {
   button.addEventListener("click", (event) => {
     let target = event.target;
-    performOperation(target);
+    if (target.classList.contains("clear-all")) {
+      screen1.value = "";
+      screen2.value = "0";
+    } else {
+      performOperation(target);
+    }
   });
-}
-
-function removeActiveClass(button) {
-  if (button.classList.contains("active-operator")) {
-    button.classList.remove("active-operator");
-  }
-}
-
-function updateScreen1(target) {
-  if (screen1.value.length < 16) {
-    screen1.value = screen1.value + screen2.value + target.value;
-    calculation = screen1.value;
-    console.log(calculation);
-  }
 }
 
 function performOperation(target) {
@@ -47,9 +38,6 @@ function performOperation(target) {
       if (!screen2.value.includes(".")) {
         screen2.value = screen2.value + target.value;
       }
-    } else if (target.classList.contains("clear-all")) {
-      screen1.value = "";
-      screen2.value = "0";
     } else if (target.classList.contains("delete")) {
       if (screen2.value.length > 1) {
         screen2.value = screen2.value.slice(0, -1);
@@ -60,5 +48,19 @@ function performOperation(target) {
   } else {
     screen2.value = target.value;
     result = false;
+  }
+}
+
+function removeActiveClass(button) {
+  if (button.classList.contains("active-operator")) {
+    button.classList.remove("active-operator");
+  }
+}
+
+function updateScreen1(target) {
+  if (screen1.value.length < 16) {
+    screen1.value = screen1.value + screen2.value + target.value;
+    calculation = screen1.value;
+    console.log(calculation);
   }
 }
